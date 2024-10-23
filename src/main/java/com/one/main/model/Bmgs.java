@@ -1,5 +1,11 @@
 package com.one.main.model;
 
-public class Bmgs {
+import jakarta.persistence.Entity;
 
+@Entity
+public class Bmgs {
+  
+	public String Empresa;
+	
+	public String Cidade;
 }

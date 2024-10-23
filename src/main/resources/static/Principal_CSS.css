@@ -50,14 +50,13 @@
 
 .card_bmg {
     display: grid;
-    grid-template-columns: 20% 60% 10%;  
-    grid-template-rows: repeat(44, 1fr); /* Cria 44 linhas */
-    width: 100%; 
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas de largura igual */
+    grid-template-rows: repeat(10, 1fr); /* 10 linhas, mas apenas as 4 primeiras colunas terão 10 botões */
+    width: 210%; 
     height: 100%; /* Limita a altura do card_bmg */
     background: rgb(243, 231, 231);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(3, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    overflow-y: scroll; /* Ativa a rolagem vertical */
-    gap: 4.6%;
+    
 }
 
 button {
@@ -68,7 +67,7 @@ button {
     box-sizing: border-box;
     color: #3B3B3B;
     cursor: pointer;
-    display: block; /* Mudado para block */
+    display: block; /* Mantenha como block para ocuparem a célula inteira */
     font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
     font-weight: 600;
@@ -84,11 +83,6 @@ button {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-}
-
-/* Posiciona cada botão em linhas distintas */
-button {
-    grid-column: 2; /* Cada botão ocupa a segunda coluna */
 }
 
 /* Centraliza cada botão dentro da célula */
