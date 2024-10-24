@@ -28,12 +28,13 @@
 }
 
 /*----------------------------------------------------------------------------------------------------------------*/
-
+/**/
 .card_body {
     display: grid;
-    grid-template-columns: 19% 800%; 
-    width: 99%;
-    height: 78vh;
+    grid-template-columns: 40% 60%; /* Duas colunas de igual largura */
+    gap: 20px; /* Espaçamento entre as colunas */
+    width: 98%;
+    height: 78.3vh;
     background: rgb(235, 227, 227);
     border-radius: 10px;
     transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -50,13 +51,14 @@
 
 .card_bmg {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 colunas de largura igual */
-    grid-template-rows: repeat(10, 1fr); /* 10 linhas, mas apenas as 4 primeiras colunas terão 10 botões */
-    width: 210%; 
-    height: 100%; /* Limita a altura do card_bmg */
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+    grid-template-rows: repeat(10, 1fr);
+    grid-auto-flow: column;
+    gap: 10px; /* Espaçamento entre os botões */
     background: rgb(243, 231, 231);
+    padding: 10px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(3, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    
 }
 
 button {
@@ -67,22 +69,18 @@ button {
     box-sizing: border-box;
     color: #3B3B3B;
     cursor: pointer;
-    display: block; /* Mantenha como block para ocuparem a célula inteira */
     font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
     font-weight: 600;
-    line-height: normal;
     margin: 0;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
+    padding: 1em;
     text-align: center;
-    text-decoration: none;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    width: 100%;
+    height: 100%;
 }
 
 /* Centraliza cada botão dentro da célula */
@@ -101,4 +99,44 @@ button:hover {
 button:active {
     box-shadow: none;
     transform: translateY(0);
+}
+
+
+
+/**/
+.card_form {
+    display: grid;
+    grid-template-columns: 12% 88%; /* Um item por linha */
+    gap: 10px; /* Espaçamento entre os campos de formulário */
+    padding: 10px;
+    background-color: #f7eeee;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
+}
+
+
+/**/
+.input {
+    width: 100%;
+    height: 44px;
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    background-color: #f0f0f0;
+    font-size: 1rem;
+    grid-column: 2;
+}
+
+
+
+
+.input-label {
+    display: grid;
+    height: 5%;
+    font-size: 1.2em;
+    grid-column: 1;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #05060f99;
 }
