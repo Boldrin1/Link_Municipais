@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.one.main.model.Bmgs;
 
 @Repository
-public interface BmgsRepository extends JpaRepository<Bmgs,Long>{
+public interface BmgRepository extends JpaRepository<Bmgs,Long>{
 
 }
